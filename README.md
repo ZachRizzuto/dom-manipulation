@@ -5,7 +5,7 @@
 - Update/change the remote origin path with to the new SSH path **OR** add a new path (f.i "solved" or "destination"). [Github's git remote actions docs](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories).
 - Push the main/master branch to the new repository.
 - Run the Live Server with the "Go Live" button in the bottom right panel of VSCode.
-- Make sure to watch the intro video before you start.
+- Make sure to watch the intro video before you start. 
 
 ## BEFORE YOU START
 - Make sure to watch the two INTRO videos before you start: 
