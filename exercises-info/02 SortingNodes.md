@@ -1,6 +1,6 @@
 # Sorting Nodes inside a DOM Element #
 
-Sorting something requires the sorting method with a callback of a sorting function to be applied to an array. As far as you remember form the SelectNodes.md file the structures returned from the DOM methods are not JavaScript types of structures, but a part of the DOM API, which means that some of the array methods will not work until we crate an array from the Node list / node children list.
+Sorting something requires the sorting method with a callbad to an array. As far as you remember form the SelectNodes.md file the structures returned from the DOM methods are not JavaScript types of structures, butck of a sorting function to be applie a part of the DOM API, which means that some of the array methods will not work until we crate an array from the Node list / node children list.
 
 ```HTML
 <!-- body contents -->

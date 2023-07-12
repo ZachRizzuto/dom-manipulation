@@ -41,7 +41,7 @@ localStorage.clear();
 // lets say we want to add "Jerry" to the
 // lonely "Tom" in the MyList localStorage property
 // Set the item of 'favorites' with a value of 'Tom' in the localStorage
-localStorage.setItem("MyList", "Tom");
+localStorage.setItem("MyList", "Tom"); 
 
 // Declare the value we are going to add to the localStorage 'favorites' property
 const newItem = 'Jerry';

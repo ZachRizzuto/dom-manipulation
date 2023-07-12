@@ -38,3 +38,50 @@
  */
 
 // Your code goes here...
+const container = document.querySelector('.cardsContainer');
+
+const setBg = () => {
+	let localStorFav = localStorage.getItem('favorites');
+	const items = Array.from(container.children);
+	items.forEach((item) => {
+		localStorFav.includes(item.id) ? item.classList.add('red') : item.classList.remove('red');
+	})
+}
+
+const addStorage = (id) => {
+	let localStorFav = localStorage.getItem('favorites');
+	if (localStorFav || typeof localStorFav === 'string') {
+		if (localStorFav.length > 0) {
+			let newItem = localStorFav += `,${id}`;
+			localStorage.setItem('favorites', newItem);
+		} else {
+			localStorage.setItem('favorites', id);
+		}
+	} else if (localStorFav === null) {
+		localStorage.setItem('favorites', id);
+	}
+}
+
+const removeStorage = (id) => {
+	let localStorFav = localStorage.getItem('favorites').split(',');
+	localStorFav.splice(localStorFav.indexOf(id), 1).join(',');
+	localStorage.setItem('favorites', localStorFav);
+}
+
+container.addEventListener('click', function(e) {
+	let localStorFav = localStorage.getItem('favorites');
+	const item = e.target;
+	console.log(typeof item.id);
+	if (localStorFav === null) {
+		addStorage(item.id);
+	} else if (localStorFav.includes(item.id) && item.id.length > 0) {
+		removeStorage(item.id);
+	} else if (!localStorFav.includes(item.id) && item.id.length > 0) {
+		addStorage(item.id);
+	}
+	setBg();
+})
+
+if (localStorage.getItem('favorites')) {
+	setBg();
+}
